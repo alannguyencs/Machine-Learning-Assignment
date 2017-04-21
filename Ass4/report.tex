@@ -1,0 +1,90 @@
+\documentclass[11pt]{article}
+\usepackage{amssymb, amsmath}
+\usepackage{graphicx}
+
+\begin{document}
+\textbf{{\huge Nguyen Huu Thanh}}
+
+
+\textit{\textbf{Assignment 4 - Matrix}}
+\vspace{5mm}
+
+Denote matrix $M = \sigma A$. Then, \\
+\begin{equation*} 
+\begin{split}
+X_1 &= IX_0 + MX_0
+ = (I + M)X_0\\ 
+X_2 &= X_1 + M^2X_0 
+= (I + M)X_0 + M^2X_0 
+= (I + M + M^2)X_0\\
+...\\
+X_t &= (I + M + M^2 + ... + M^t)X_0 \\
+(M-I)X_t &= (M-I)(I + M + M^2 + ... + M^t)X_0 \\
+(M-I)X_t &=(M - I + M^2 - M + M^3 - M^2 + ... + M^{t+1} - M^t)X_0\\
+(M-I)X_t &=(M^{t+1} - I) X_0\\
+X_t &= (M-I)^{-1}(M^{t+1} - I)X_0
+\end{split}
+\end{equation*}
+
+By decomposing matrix $M$, we get$M = PDP^{-1}$, where $D$ is a diagonal matrix formed from the eigenvalues of $M$, and the columns
+of $P$ are the corresponding eigenvectors of $M$. \\
+
+
+Because $P^{-1}P = I$ then $M^{t+1}=(PDP^{-1})^{t+1} = PD^{t+1}P^{-1}$.\\
+
+Therefore, $X_t = (M-I)^{-1}(PD^{t+1}P^{-1} - I)X_0$
+
+
+In this problem, \\
+\[ D = 
+\begin{bmatrix}
+w_1 &0 &0 &0 &0\\
+0 &w_2 &0 &0 &0\\
+0 &0 &w_3 &0 &0\\
+0 &0 &0 &w_4 &0\\
+0 &0 &0 &0 &w_5
+\end{bmatrix}
+\]
+
+Then, \\
+\[ D^{t+1} = 
+\begin{bmatrix}
+w_1^{t+1} &0 &0 &0 &0\\
+0 &w_2^{t+1} &0 &0 &0\\
+0 &0 &w_3^{t+1} &0 &0\\
+0 &0 &0 &w_4^{t+1} &0\\
+0 &0 &0 &0 &w_5^{t+1}
+\end{bmatrix}
+\]
+For $w_i$, we have: \\
+
+$w_i^{\infty} = \begin{cases}  0, &\mbox{if }  -1 < w_i < 1\\ 1 \mbox{ or } -1, & \mbox{if } w_i = -1  \mbox{ or } 1
+\\ \infty, &\mbox{if } w_i < -1 \mbox{ or } w_i > 1
+ \end{cases}$\\   
+We consider two cases:
+\begin{itemize}
+\item One of $w_i \rightarrow \infty$ then $X_{\infty}$ is \textbf{divergent}. \\This happens when $1 > \sigma \geq$ \textbf{\textit{threshold}  $=0.47$}. The threshold is calculated by generating $w_i$ on several values of $\sigma$ in range (0,1).
+\item All of $w_i \rightarrow 0$ then $D^{\infty}$ is zero matrix. Then, 
+\begin{equation*} 
+\begin{split}
+X_{\infty} &= (M-I)^{-1}(PD^{\infty}P^{-1} - I)X_0 \\
+X_{\infty} &= -(M-I)^{-1}X_0
+\end{split}
+\end{equation*}
+This happens when $0 < \sigma <$ \textit{threshold}.
+
+\end{itemize}
+The below result is obtained in case $\sigma = 0.33$.\\
+\[X_{\infty} = 
+\begin{bmatrix}
+1.6322411 \\
+0.68862128\\
+0.53863956\\
+0.45449004\\
+0.68862128
+\end{bmatrix}
+\]
+
+
+
+\end{document}

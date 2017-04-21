@@ -1,0 +1,38 @@
+Presenting polynomial regression model by their parameters from A0 to Am
+RMS Error is picked by Leave-One-Out crossing validation
+
+
+Linear:
+0.048 0.440
+RMS Error: 0.090550544
+
+Degree 2:
+0.413 0.300 -0.285 
+RMS Error: 0.088277451
+
+Degree 3:
+0.371 1.150 -2.718 1.741 
+RMS Error: 0.083291146
+
+Degree 4:
+0.303 3.438 -14.496 21.360 -10.268 
+RMS Error: 0.050905443
+
+Degree 5:
+0.314 2.888 -9.947 8.164 5.371 -6.487 
+RMS Error: 0.055277045
+
+Degree 6:
+0.314 2.859 -9.744 8.211 3.501 -3.360 -1.486 
+RMS Error: 0.057172451
+
+Degree 7:
+0.301 3.399 -12.894 12.666 5.377 -6.567 -7.308 5.370 
+RMS Error: 0.048523506
+
+Degree 8:
+0.298 3.463 -12.761 10.775 7.295 -3.193 -7.897 -4.115 6.506 
+RMS Error: 0.045664322
+
+Degree 9:
+0.300 3.368 -11.844 8.460 7.557 -0.479 -5.779 -5.810 -1.349 5.966 

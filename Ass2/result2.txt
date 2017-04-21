@@ -1,0 +1,8 @@
+Presenting polynomial regression model by their parameters from A0 to Am
+RMS Error is picked by Leave-One-Out crossing validation
+
+
+Linear:
+0.048 0.440
+RMS Error: 0.090550544
+

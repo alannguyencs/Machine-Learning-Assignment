@@ -1,0 +1,18 @@
+Build up a Linear Regression model by coding. 
+
+https://en.wikipedia.org/wiki/Linear_regression
+
+the data is a 100 sets of two values; (call x and y)
+
+Step 1; 
+Use training data to build up the linear regression
+
+Step 2; 
+Use test data's x to try to guess y
+
+Step 3; 
+Compare with the test data's y, and calculate RMS value. 
+
+Step 4; (Optional) 
+If you can make better model than Linear Regression, 
+please do coding & calculate better RMS. 

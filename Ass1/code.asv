@@ -1,0 +1,7 @@
+function Linear
+    load learning_data.txt
+    X = ;
+
+    lm = fitlm(X,MPG,'linear')
+ 
+end
